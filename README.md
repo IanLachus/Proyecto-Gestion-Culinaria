@@ -1,20 +1,20 @@
 # 🍳 Plataforma Culinaria Colaborativa
 
 **Curso:** SOFT-06 — Diseño y programación web
-**Sección:** SCV — Periodo 2026-C1
+
 **Docente:** Stephanie Delgado Brenes
+
+**Periodo:** C2 - 2026
 
 
 ## 👥 Integrantes y roles
 
-| Integrante | Rol en el proyecto |
-|------------|--------------------|
-| Ian Mora | Repositorio y documentación (GitHub, README, control de versiones) |
-| Pablo Beita | Repositorio y documentación (GitHub, wireframes / maquetación) |
-| Naith Perez | [Rol — ej. Maquetación HTML/CSS] |
-| Dana Rivera | [Rol — ej. Programación JavaScript] |
-
-> ⚠️ **Por completar:** apellidos y los roles del resto del equipo.
+| Integrantes |
+|------------|
+| Beita Mendez Pablo | 
+| Mora Espinoza Ian Aarón | 
+| Perez Miranda Naith Akari | 
+| Rivera Matarrita Dana Valeria |
 
 ---
 
@@ -23,23 +23,6 @@
 - **HTML5** — estructura y contenido.
 - **CSS3** — estilos visuales y diseño responsivo.
 - **JavaScript** — interactividad y lógica del lado del cliente.
-
----
-
-## 🌿 Estrategia de branches
-
-Se trabaja con un flujo basado en ramas para mantener el código estable y organizado:
-
-| Rama | Propósito |
-|------|-----------|
-| `main` | Versión estable y revisada del proyecto. Solo se actualiza con código probado. |
-| `develop` | Rama de integración donde se unen las funcionalidades antes de pasar a `main`. |
-| `feature/<nombre>` | Una rama por cada funcionalidad nueva (ej. `feature/buscar-recetas`, `feature/login`, `feature/planificador`). |
-
-**Flujo de trabajo:**
-1. Cada integrante crea una rama `feature/...` a partir de `develop`.
-2. Al terminar la funcionalidad, se hace un *pull request* hacia `develop`.
-3. Una vez integrado y probado, `develop` se fusiona a `main`.
 
 ---
 
@@ -59,8 +42,6 @@ Se utiliza la convención **Conventional Commits** para mantener un historial cl
 | `style` | Cambios de formato/estilo que no afectan la lógica |
 | `refactor` | Reorganización de código sin cambiar su comportamiento |
 
-**Buenas prácticas:** commits pequeños y frecuentes, descripciones claras y en español, sin acumular muchos cambios en un solo commit.
-
 ---
 
 ## 📁 Estructura del repositorio
@@ -79,6 +60,6 @@ Se utiliza la convención **Conventional Commits** para mantener un historial cl
 
 ## 🔗 Repositorio
 
-[https://github.com/usuario/nombre-del-repo](https://github.com/usuario/nombre-del-repo)
+[https://github.com/IanLachus/Proyecto-Gestion-Culinaria](https://github.com/IanLachus/Proyecto-Gestion-Culinaria)
 
-> ⚠️ **Por completar:** enlace real del repositorio.
+
