@@ -3,8 +3,11 @@
 > Plataforma web colaborativa para la **gestión y el descubrimiento de recetas culinarias**, que facilita la planificación de comidas según presupuesto, preferencias dietéticas e ingredientes disponibles.
 
 **Curso:** SOFT-06 — Diseño y programación web
-**Sección:** SCV — Periodo 2026-C1
+
 **Docente:** Stephanie Delgado Brenes
+
+**Periodo:** C2 - 2026
+
 
 ---
 
@@ -46,10 +49,10 @@ El proyecto se desarrolla como una **solución frontend** que evoluciona mediant
 
 | Integrante | Rol en el proyecto |
 |------------|--------------------|
-| Mora Espinoza Ian Aarón | Repositorio y documentación (GitHub, README, control de versiones) |
-| Beita Mendez Pablo | Repositorio y documentación (GitHub, wireframes / maquetación) |
-| Perez Miranda Naith Akari | [Rol — por confirmar, ej. Maquetación HTML/CSS] |
-| Rivera Matarrita Dana Valeria | [Rol — por confirmar, ej. Programación JavaScript] |
+| Mora Espinoza Ian Aarón | Repositorio y documentación (GitHub/control de versiones) |
+| Beita Mendez Pablo | Repositorio y documentación (GitHub/README) |
+| Perez Miranda Naith Akari | Maquetación/Wireframes |
+| Rivera Matarrita Dana Valeria | Maquetación/Wireframes |
 
 ---
 
