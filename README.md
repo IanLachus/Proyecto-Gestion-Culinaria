@@ -23,10 +23,15 @@ El sistema contempla tres tipos de usuario:
 
 Además, la plataforma incorpora un **planificador de comidas** (menús semanales con cálculo de presupuesto y lista de compras automática) y un **módulo de comunidad** (seguidores, rankings de recetas y retos mensuales).
 
+La Plataforma Culinaria Colaborativa es una aplicación web diseñada para facilitar la gestión y el descubrimiento de recetas culinarias mediante un entorno intuitivo y colaborativo. El sistema permite a los usuarios compartir recetas, explorar contenido gastronómico, organizar sus preparaciones y administrar información relacionada con ingredientes, categorías y perfiles de usuario.
+
+En el Avance II, el proyecto evoluciona hacia la implementación del frontend mediante HTML y CSS, siguiendo los wireframes desarrollados en la primera etapa. Esta iteración se enfoca en la construcción de la interfaz visual, la navegación entre pantallas y la aplicación de principios de diseño responsivo, accesibilidad y buenas prácticas de desarrollo web.
+
 ---
 
-## 🎯 Alcance
+## 🎯 Alcances
 
+## Alcance Avance I
 El proyecto se desarrolla como una **solución frontend** que evoluciona mediante al menos dos ciclos de retroalimentación simulada.
 
 **Incluido en el alcance del proyecto:**
@@ -43,16 +48,30 @@ El proyecto se desarrolla como una **solución frontend** que evoluciona mediant
 - Repositorio en GitHub con este README.
 - Wireframes de mínimo 6 funcionalidades para dos tipos de usuario (ubicados en `/docs`).
 
+  ## Alcance Avance II
+
+En el Avance II se inicia la construcción del frontend del sistema, implementando la estructura de las diferentes pantallas mediante HTML semántico y aplicando estilos con CSS para lograr una interfaz consistente, accesible y adaptable a distintos dispositivos. Además, se establece la estructura del proyecto en GitHub y se prepara la navegación entre las funcionalidades principales correspondientes a los diferentes tipos de usuario definidos en el proyecto.
+
+En esta segunda iteración del proyecto se desarrollará la base visual de la aplicación web mediante la implementación de HTML y CSS, tomando como referencia los wireframes elaborados en el Avance I.
+
+Los principales objetivos de esta etapa son:
+
+- Implementar la estructura de las pantallas utilizando HTML5 semántico.
+- Aplicar estilos mediante CSS3 para mantener una identidad visual uniforme.
+- Desarrollar una navegación funcional entre las diferentes vistas del sistema.
+- Organizar la estructura del proyecto dentro del repositorio de GitHub.
+- Preparar la base para la incorporación de funcionalidades dinámicas en las siguientes etapas del proyecto.
+
 ---
 
 ## 👥 Integrantes y roles
 
 | Integrante | Rol en el proyecto |
 |------------|--------------------|
-| Mora Espinoza Ian Aarón | Repositorio y documentación (GitHub/control de versiones) |
-| Beita Mendez Pablo | Repositorio y documentación (GitHub/README) |
-| Perez Miranda Naith Akari | Maquetación/Wireframes |
-| Rivera Matarrita Dana Valeria | Maquetación/Wireframes |
+| Mora Espinoza Ian Aarón | Código de la segunda iteración |
+| Beita Mendez Pablo | Código de la segunda iteración |
+| Perez Miranda Naith Akari | Código de la segunda iteración - Repositorio en GitHub actualizado|
+| Rivera Matarrita Dana Valeria | Código de la segunda iteración - Repositorio en GitHub actualizado|
 
 ---
 
