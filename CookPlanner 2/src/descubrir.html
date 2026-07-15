@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CookPlanner - Descubrir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="barra-ventana">
+    <span class="punto rojo"></span>
+    <span class="punto gris"></span>
+    <span class="punto verde-punto"></span>
+    <span class="marca-ventana">Cook<span class="naranja">Planner</span></span>
+  </header>
+
+  <nav class="menu">
+    <a href="descubrir.html" class="opcion activa">🔍 Descubrir</a>
+    <a href="planificador.html" class="opcion">📅 Planificador</a>
+    <a href="comunidad.html" class="opcion">🏆 Comunidad</a>
+    <a href="mi-cocina.html" class="opcion">👨‍🍳 Mi Cocina</a>
+    <a href="mi-cocina.html" class="usuario">
+      <span class="avatar">EM</span>
+      <span>Elena M.<br><small>Usuario Regular</small></span>
+    </a>
+  </nav>
+
+  <main class="contenedor">
+
+    <section class="hero">
+      <p class="etiqueta">Descubre - Cocina - Comparte</p>
+      <h1>¿Que tienes en la nevera?</h1>
+      <p>Busca recetas segun los ingredientes que tienes disponibles y aprovecha lo que ya tienes en casa.</p>
+    </section>
+
+    <section class="espacio">
+      <form class="buscador" action="recetas.html" method="get">
+        <label for="buscar">Buscar receta:</label>
+        <input type="text" id="buscar" name="buscar" placeholder="Buscar recetas por nombre...">
+        <a href="recetas.html" class="boton boton-claro">Filtros</a>
+      </form>
+    </section>
+
+    <section class="espacio">
+      <div class="titulo-seccion">
+        <h2>Explora por categoria</h2>
+        <a href="recetas.html" class="boton boton-borde">Ver todas las recetas</a>
+      </div>
+      <div class="categorias">
+        <a href="recetas.html" class="categoria">🍳 Desayuno</a>
+        <a href="recetas.html" class="categoria">🍝 Almuerzo / Cena</a>
+        <a href="recetas.html" class="categoria">🥗 Saludable</a>
+        <a href="recetas.html" class="categoria">🧁 Postres</a>
+        <a href="recetas.html" class="categoria">🥕 Vegetariano</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <span class="marca-pie">Cook<span class="naranja">Planner</span></span>
+    <nav class="enlaces-pie">
+      <a href="descubrir.html">Descubrir</a>
+      <a href="recetas.html">Recetas</a>
+      <a href="planificador.html">Planificador</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="mi-cocina.html">Mi Cocina</a>
+      <a href="chef.html">Panel del Chef</a>
+      <a href="admin.html">Administracion</a>
+      <a href="index.html">Cerrar sesion</a>
+    </nav>
+    <small>Desarrollado por el grupo 4</small>
+  </footer>
+
+</body>
+</html>

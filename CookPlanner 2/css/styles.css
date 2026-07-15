@@ -1,0 +1,812 @@
+/* ---- Estilos generales ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F1E8D6;
+  color: #3B2C20;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #3B2C20;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Foco visible para accesibilidad */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #BE5E36;
+}
+
+/* ---- Contenedor central ---- */
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- Barra superior tipo ventana ---- */
+.barra-ventana {
+  background-color: #B4A184;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.rojo { background-color: #E0503F; }
+.gris { background-color: #6b6b6b; }
+.verde-punto { background-color: #4C8A3F; }
+
+.marca-ventana {
+  margin-left: auto;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: bold;
+  color: #3B2C20;
+}
+
+.naranja {
+  color: #BE5E36;
+}
+
+/* ---- Menú de navegación ---- */
+.menu {
+  background-color: #B4A184;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.opcion {
+  background-color: #FBF6EC;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opcion:hover {
+  background-color: #eee6d6;
+}
+
+.opcion.activa {
+  background-color: #3E5228;
+  color: #ffffff;
+}
+
+.usuario {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background-color: #34472B;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.usuario small {
+  color: #3B2C20;
+}
+
+/* ---- Botones ---- */
+.boton {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.boton-verde {
+  background-color: #3E5228;
+  color: #ffffff;
+}
+
+.boton-verde:hover {
+  background-color: #2C3B1B;
+}
+
+.boton-claro {
+  background-color: #FBF6EC;
+  color: #3B2C20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.boton-borde {
+  background-color: transparent;
+  color: #3E5228;
+  border: 2px solid #3E5228;
+}
+
+.boton-gris {
+  display: block;
+  background-color: #F4EDDD;
+  color: #3B2C20;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.boton-gris:hover {
+  background-color: #E3D7C2;
+}
+
+/* ---- Espacios ---- */
+.espacio {
+  margin-top: 30px;
+}
+
+.titulo-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 25px 0 15px 0;
+}
+
+/* ==========================================================
+   LOGIN
+   ========================================================== */
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+.login-marca {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+.login-marca .emoji-chef {
+  font-size: 80px;
+}
+
+.login-marca .logo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.login-marca .frase {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.login-marca .verduras {
+  font-size: 40px;
+  margin-top: 15px;
+}
+
+.login-formulario {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.tarjeta-login {
+  background-color: #FBF6EC;
+  border: 2px solid #3B2C20;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-login h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.tarjeta-login .subtitulo {
+  text-align: center;
+  color: #7A6A56;
+  margin-bottom: 25px;
+}
+
+/* ---- Formularios ---- */
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E3D7C2;
+  border-radius: 8px;
+  background-color: #F4EDDD;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.enlace-naranja {
+  color: #BE5E36;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.texto-centro {
+  text-align: center;
+  margin-top: 15px;
+  color: #7A6A56;
+}
+
+/* ==========================================================
+   BUSCADOR
+   ========================================================== */
+.buscador {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.buscador input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid #E3D7C2;
+  border-radius: 25px;
+  background-color: #FBF6EC;
+  font-size: 15px;
+}
+
+/* ==========================================================
+   HERO (Descubrir)
+   ========================================================== */
+.hero {
+  background: linear-gradient(120deg, #3d3322, #3E5228);
+  color: #ffffff;
+  padding: 45px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.hero .etiqueta {
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 450px;
+}
+
+/* ---- Categorías ---- */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categoria {
+  background-color: #FBF6EC;
+  border: 1px solid #E3D7C2;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* ==========================================================
+   TARJETAS DE RECETA
+   ========================================================== */
+.recetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.recetas-dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tarjeta {
+  background-color: #FBF6EC;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-img {
+  position: relative;
+}
+
+.tarjeta-img img {
+  width: 100%;
+}
+
+.favorito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  color: #D94C3D;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tarjeta-info {
+  padding: 18px;
+}
+
+.pais {
+  text-align: center;
+  color: #7A6A56;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.nombre-receta {
+  text-align: center;
+  color: #3E5228;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.pie-tarjeta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #E3D7C2;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.pie-tarjeta .categoria-nombre {
+  font-weight: bold;
+}
+
+.estrellas {
+  color: #E6B845;
+}
+
+/* ==========================================================
+   PLANIFICADOR
+   ========================================================== */
+.panel {
+  background-color: #FBF6EC;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presupuesto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.presupuesto .monto {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+}
+
+.presupuesto input {
+  width: 80px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #E3D7C2;
+  border-radius: 8px;
+  background-color: #F4EDDD;
+}
+
+.barra-progreso {
+  height: 12px;
+  background-color: #F4EDDD;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+
+.barra-progreso .relleno {
+  height: 12px;
+  width: 0%;
+  background-color: #3E5228;
+  border-radius: 25px;
+}
+
+.info-presupuesto {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #7A6A56;
+}
+
+.tabla-planificador {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-planificador th {
+  padding: 10px;
+  color: #7A6A56;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.tabla-planificador td {
+  padding: 6px;
+  text-align: center;
+}
+
+.tabla-planificador .dia {
+  text-align: left;
+  font-weight: bold;
+}
+
+.casilla {
+  width: 100%;
+  height: 70px;
+  background-color: #F4EDDD;
+  border: 2px dashed #E3D7C2;
+  border-radius: 12px;
+  font-size: 22px;
+  color: #7A6A56;
+  cursor: pointer;
+}
+
+.casilla:hover {
+  border-color: #3E5228;
+  color: #3E5228;
+}
+
+/* ==========================================================
+   COMUNIDAD (rankings)
+   ========================================================== */
+.pestanas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pestana {
+  background-color: #FBF6EC;
+  border: 1px solid #E3D7C2;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pestana.activa {
+  background-color: #3E5228;
+  color: #ffffff;
+}
+
+.fila-ranking {
+  background-color: #FBF6EC;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.numero {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oro { background-color: #E6B845; }
+.plata { background-color: #A9C0D6; }
+.bronce { background-color: #D98A5A; }
+.normal { background-color: #8C7B62; }
+
+.mini-img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.nombre-ranking {
+  flex: 1;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+}
+
+.datos-ranking {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+/* ==========================================================
+   PERFIL (Mi Cocina)
+   ========================================================== */
+.perfil {
+  background-color: #FBF6EC;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-banner {
+  height: 130px;
+  background: linear-gradient(120deg, #3a4a28, #6b7a4a);
+}
+
+.perfil-datos {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.perfil-avatar {
+  width: 90px;
+  height: 90px;
+  background-color: #34472B;
+  border-radius: 50%;
+  margin-top: -60px;
+  border: 4px solid #FBF6EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.perfil-rol {
+  color: #7A6A56;
+  font-weight: bold;
+}
+
+.estadisticas {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.estadistica {
+  text-align: center;
+}
+
+.estadistica b {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+}
+
+.estadistica span {
+  font-size: 13px;
+  color: #7A6A56;
+}
+
+/* ==========================================================
+   TABLAS (Chef / Admin)
+   ========================================================== */
+.formulario-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.formulario-doble .completo {
+  grid-column: 1 / 3;
+}
+
+.tarjetas-numeros {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.tarjeta-numero {
+  flex: 1;
+  min-width: 180px;
+  background-color: #FBF6EC;
+  border-left: 5px solid #3E5228;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-numero b {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+}
+
+.tarjeta-numero span {
+  color: #7A6A56;
+  font-size: 14px;
+}
+
+.tabla-datos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FBF6EC;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-datos th {
+  background-color: #3E5228;
+  color: #ffffff;
+  text-align: left;
+  padding: 14px;
+}
+
+.tabla-datos td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #E3D7C2;
+}
+
+.etiqueta-estado {
+  padding: 4px 12px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.estado-ok {
+  background-color: #DCE8CE;
+  color: #2C3B1B;
+}
+
+.estado-espera {
+  background-color: #F6E4C8;
+  color: #9a6a26;
+}
+
+/* ==========================================================
+   PIE DE PÁGINA
+   ========================================================== */
+.pie {
+  background-color: #2C3B1B;
+  color: #ffffff;
+  padding: 25px 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.marca-pie {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.enlaces-pie {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.enlaces-pie a {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.enlaces-pie a:hover {
+  text-decoration: underline;
+}
+
+.pie small {
+  font-size: 13px;
+}
+
+/* ==========================================================
+   RESPONSIVE 
+   ========================================================== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .usuario {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .login-marca,
+  .login-formulario {
+    flex: 100%;
+  }
+
+  .recetas,
+  .recetas-dos,
+  .formulario-doble {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-doble .completo {
+    grid-column: 1 / 2;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .fila-ranking {
+    flex-wrap: wrap;
+  }
+
+  .pie {
+    flex-direction: column;
+    text-align: center;
+  }
+}

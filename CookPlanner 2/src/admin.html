@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CookPlanner - Administracion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="barra-ventana">
+    <span class="punto rojo"></span>
+    <span class="punto gris"></span>
+    <span class="punto verde-punto"></span>
+    <span class="marca-ventana">Cook<span class="naranja">Planner</span></span>
+  </header>
+
+  <nav class="menu">
+    <a href="admin.html" class="opcion activa">📊 Panel Admin</a>
+    <a href="descubrir.html" class="opcion">🔍 Explorar</a>
+    <a href="comunidad.html" class="opcion">🏆 Comunidad</a>
+    <a href="admin.html" class="usuario">
+      <span class="avatar">AD</span>
+      <span>Ana D.<br><small>Administrador</small></span>
+    </a>
+  </nav>
+
+  <main class="contenedor">
+
+    <h1 class="espacio">Panel de administracion</h1>
+
+    <section class="tarjetas-numeros espacio">
+      <div class="tarjeta-numero"><b>1 248</b><span>Usuarios registrados</span></div>
+      <div class="tarjeta-numero"><b>367</b><span>Recetas publicadas</span></div>
+      <div class="tarjeta-numero"><b>5</b><span>Reportes pendientes</span></div>
+      <div class="tarjeta-numero"><b>18</b><span>Categorias activas</span></div>
+    </section>
+
+    <div class="titulo-seccion">
+      <h2>Gestion de categorias y etiquetas</h2>
+      <button class="boton boton-verde">Nueva categoria</button>
+    </div>
+
+    <table class="tabla-datos">
+      <tr>
+        <th>Categoria</th><th>Etiqueta</th><th>Recetas</th><th>Estado</th>
+      </tr>
+      <tr>
+        <td>Desayuno</td><td>#desayuno</td><td>84</td>
+        <td><span class="etiqueta-estado estado-ok">Activa</span></td>
+      </tr>
+      <tr>
+        <td>Almuerzo / Cena</td><td>#almuerzo</td><td>142</td>
+        <td><span class="etiqueta-estado estado-ok">Activa</span></td>
+      </tr>
+      <tr>
+        <td>Saludable</td><td>#saludable</td><td>76</td>
+        <td><span class="etiqueta-estado estado-ok">Activa</span></td>
+      </tr>
+      <tr>
+        <td>Postres</td><td>#postres</td><td>65</td>
+        <td><span class="etiqueta-estado estado-espera">Revision</span></td>
+      </tr>
+    </table>
+
+    <h2 class="espacio">Moderacion de contenido</h2>
+    <table class="tabla-datos">
+      <tr>
+        <th>Contenido reportado</th><th>Motivo</th><th>Reportes</th><th>Accion</th>
+      </tr>
+      <tr>
+        <td>Comentario en "Tacos de Birria"</td><td>Spam</td><td>3</td>
+        <td><a href="#" class="enlace-naranja">Revisar</a></td>
+      </tr>
+      <tr>
+        <td>Receta "Brownie expres"</td><td>Imagen inapropiada</td><td>2</td>
+        <td><a href="#" class="enlace-naranja">Revisar</a></td>
+      </tr>
+    </table>
+
+  </main>
+
+  <footer class="pie">
+    <span class="marca-pie">Cook<span class="naranja">Planner</span></span>
+    <nav class="enlaces-pie">
+      <a href="descubrir.html">Descubrir</a>
+      <a href="recetas.html">Recetas</a>
+      <a href="planificador.html">Planificador</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="mi-cocina.html">Mi Cocina</a>
+      <a href="chef.html">Panel del Chef</a>
+      <a href="admin.html">Administracion</a>
+      <a href="index.html">Cerrar sesion</a>
+    </nav>
+    <small>Desarrollado por el grupo 4</small>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CookPlanner - Panel del Chef</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="barra-ventana">
+    <span class="punto rojo"></span>
+    <span class="punto gris"></span>
+    <span class="punto verde-punto"></span>
+    <span class="marca-ventana">Cook<span class="naranja">Planner</span></span>
+  </header>
+
+  <nav class="menu">
+    <a href="chef.html" class="opcion activa">👨‍🍳 Panel del Chef</a>
+    <a href="descubrir.html" class="opcion">🔍 Explorar</a>
+    <a href="comunidad.html" class="opcion">🏆 Comunidad</a>
+    <a href="chef.html" class="usuario">
+      <span class="avatar">CM</span>
+      <span>Chef Marco<br><small>Chef verificado</small></span>
+    </a>
+  </nav>
+
+  <main class="contenedor">
+
+    <h1 class="espacio">Panel del Chef</h1>
+    <p>Carga recetas detalladas con ingredientes, costos, pasos y presupuesto por porcion.</p>
+
+    <section class="panel espacio">
+      <h2>Cargar nueva receta</h2>
+
+      <form action="chef.html" method="post">
+        <div class="campo espacio">
+          <label for="nombre">Nombre de la receta</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Gallo Pinto tradicional">
+        </div>
+
+        <div class="formulario-doble">
+          <div class="campo">
+            <label for="origen">Pais de origen</label>
+            <input type="text" id="origen" name="origen" placeholder="Ej: Costa Rica">
+          </div>
+          <div class="campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria">
+              <option>Desayuno</option>
+              <option>Almuerzo / Cena</option>
+              <option>Saludable</option>
+              <option>Postre</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="dificultad">Dificultad</label>
+            <select id="dificultad" name="dificultad">
+              <option>Facil</option>
+              <option>Media</option>
+              <option>Alta</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="precio">Presupuesto por porcion (€)</label>
+            <input type="number" id="precio" name="precio" placeholder="2.50">
+          </div>
+        </div>
+
+        <div class="campo espacio">
+          <label for="ingredientes">Ingredientes (con cantidades y costos)</label>
+          <textarea id="ingredientes" name="ingredientes" rows="4" placeholder="200 g de arroz - 0.40 euros"></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="pasos">Instrucciones paso a paso</label>
+          <textarea id="pasos" name="pasos" rows="4" placeholder="1. Sofrie la cebolla..."></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="imagen">Imagen del platillo</label>
+          <input type="file" id="imagen" name="imagen">
+        </div>
+
+        <button type="submit" class="boton boton-verde">Publicar receta</button>
+        <button type="button" class="boton boton-borde">Guardar borrador</button>
+      </form>
+    </section>
+
+    <h2 class="espacio">Mis recetas subidas</h2>
+    <table class="tabla-datos">
+      <tr>
+        <th>Receta</th><th>Categoria</th><th>Presupuesto</th><th>Estado</th>
+      </tr>
+      <tr>
+        <td>Gallo Pinto tradicional</td><td>Desayuno</td><td>€2.50</td>
+        <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
+      </tr>
+      <tr>
+        <td>Pasta Alfredo con pollo</td><td>Almuerzo / Cena</td><td>€4.20</td>
+        <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
+      </tr>
+      <tr>
+        <td>Tacos de Birria</td><td>Almuerzo / Cena</td><td>€3.80</td>
+        <td><span class="etiqueta-estado estado-espera">En revision</span></td>
+      </tr>
+    </table>
+
+  </main>
+
+  <footer class="pie">
+    <span class="marca-pie">Cook<span class="naranja">Planner</span></span>
+    <nav class="enlaces-pie">
+      <a href="descubrir.html">Descubrir</a>
+      <a href="recetas.html">Recetas</a>
+      <a href="planificador.html">Planificador</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="mi-cocina.html">Mi Cocina</a>
+      <a href="chef.html">Panel del Chef</a>
+      <a href="admin.html">Administracion</a>
+      <a href="index.html">Cerrar sesion</a>
+    </nav>
+    <small>Desarrollado por el grupo 4</small>
+  </footer>
+
+</body>
+</html>
