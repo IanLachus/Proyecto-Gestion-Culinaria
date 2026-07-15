@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Pasta Alfredo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c7a56b"/>
+      <stop offset="1" stop-color="#8a6a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <circle cx="200" cy="128" r="78" fill="rgba(255,255,255,0.18)"/>
+  <text x="200" y="160" font-size="96" text-anchor="middle" dominant-baseline="middle">🍝</text>
+  <text x="200" y="252" font-size="21" font-family="Georgia, serif" fill="#ffffff" text-anchor="middle" font-weight="bold">Pasta Alfredo</text>
+</svg>
