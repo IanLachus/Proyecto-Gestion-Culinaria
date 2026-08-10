@@ -810,3 +810,71 @@ textarea:focus {
     text-align: center;
   }
 }
+
+/* ==========================================================
+   ESTILOS PARA LAS FUNCIONES DE JAVASCRIPT
+   ========================================================== */
+
+/* ---- Mensajes de error y de exito ---- */
+.mensaje {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.mensaje-error {
+  background-color: #F8DCD8;
+  color: #A33224;
+  border: 1px solid #D94C3D;
+}
+
+.mensaje-exito {
+  background-color: #DCE8CE;
+  color: #2C3B1B;
+  border: 1px solid #3E5228;
+}
+
+/* ---- Campo con error ---- */
+.campo input.campo-error,
+.campo select.campo-error,
+.campo textarea.campo-error {
+  border: 2px solid #D94C3D;
+}
+
+/* ---- Boton para eliminar recetas ---- */
+.boton-eliminar {
+  background-color: #D94C3D;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-eliminar:hover {
+  background-color: #A33224;
+}
+
+/* ---- Corazon de favoritos desmarcado ---- */
+.favorito.inactivo {
+  color: #b7ada0;
+}
+
+.aviso-favorito {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #3E5228;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ---- Casilla del planificador con una comida ---- */
+.casilla.ocupada {
+  background-color: #DCE8CE;
+  border: 2px solid #3E5228;
+  color: #2C3B1B;
+  font-size: 13px;
+  font-weight: bold;
+}
