@@ -34,7 +34,10 @@
     <section class="panel espacio">
       <h2>Cargar nueva receta</h2>
 
-      <form action="chef.html" method="post">
+      <form action="chef.html" method="post" id="formulario-receta" novalidate>
+
+        <p id="mensaje"></p>
+
         <div class="campo espacio">
           <label for="nombre">Nombre de la receta</label>
           <input type="text" id="nombre" name="nombre" placeholder="Ej: Gallo Pinto tradicional">
@@ -63,14 +66,14 @@
             </select>
           </div>
           <div class="campo">
-            <label for="precio">Presupuesto por porcion (€)</label>
-            <input type="number" id="precio" name="precio" placeholder="2.50">
+            <label for="precio">Presupuesto por porcion (₡)</label>
+            <input type="number" id="precio" name="precio" step="1" min="0" placeholder="1500">
           </div>
         </div>
 
         <div class="campo espacio">
           <label for="ingredientes">Ingredientes (con cantidades y costos)</label>
-          <textarea id="ingredientes" name="ingredientes" rows="4" placeholder="200 g de arroz - 0.40 euros"></textarea>
+          <textarea id="ingredientes" name="ingredientes" rows="4" placeholder="200 g de arroz - ₡350"></textarea>
         </div>
 
         <div class="campo">
@@ -84,27 +87,38 @@
         </div>
 
         <button type="submit" class="boton boton-verde">Publicar receta</button>
-        <button type="button" class="boton boton-borde">Guardar borrador</button>
+        <button type="button" class="boton boton-borde" id="boton-limpiar">Limpiar formulario</button>
       </form>
     </section>
 
-    <h2 class="espacio">Mis recetas subidas</h2>
+    <div class="titulo-seccion">
+      <h2>Mis recetas subidas</h2>
+      <p>Total de recetas: <b id="contador">3</b></p>
+    </div>
+
     <table class="tabla-datos">
-      <tr>
-        <th>Receta</th><th>Categoria</th><th>Presupuesto</th><th>Estado</th>
-      </tr>
-      <tr>
-        <td>Gallo Pinto tradicional</td><td>Desayuno</td><td>€2.50</td>
-        <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
-      </tr>
-      <tr>
-        <td>Pasta Alfredo con pollo</td><td>Almuerzo / Cena</td><td>€4.20</td>
-        <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
-      </tr>
-      <tr>
-        <td>Tacos de Birria</td><td>Almuerzo / Cena</td><td>€3.80</td>
-        <td><span class="etiqueta-estado estado-espera">En revision</span></td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Receta</th><th>Categoria</th><th>Presupuesto</th><th>Estado</th><th>Accion</th>
+        </tr>
+      </thead>
+      <tbody id="lista-recetas">
+        <tr>
+          <td>Gallo Pinto tradicional</td><td>Desayuno</td><td>₡1.500</td>
+          <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
+          <td><button class="boton-eliminar">Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>Pasta Alfredo con pollo</td><td>Almuerzo / Cena</td><td>₡2.800</td>
+          <td><span class="etiqueta-estado estado-ok">Publicada</span></td>
+          <td><button class="boton-eliminar">Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>Tacos de Birria</td><td>Almuerzo / Cena</td><td>₡2.300</td>
+          <td><span class="etiqueta-estado estado-espera">En revision</span></td>
+          <td><button class="boton-eliminar">Eliminar</button></td>
+        </tr>
+      </tbody>
     </table>
 
   </main>
@@ -123,6 +137,9 @@
     </nav>
     <small>Desarrollado por el grupo 4</small>
   </footer>
+
+  <script src="../js/formato.js"></script>
+  <script src="../js/chef.js"></script>
 
 </body>
 </html>

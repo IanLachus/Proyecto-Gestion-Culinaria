@@ -35,8 +35,8 @@
         <p>Semana del 23 - 29 jun 2026</p>
       </div>
       <div>
-        <button class="boton boton-claro">🛒 Lista de compras</button>
-        <button class="boton boton-borde">Limpiar</button>
+        <button class="boton boton-claro" id="boton-compras">🛒 Lista de compras</button>
+        <button class="boton boton-borde" id="boton-limpiar-plan">Limpiar</button>
       </div>
     </div>
 
@@ -45,20 +45,20 @@
       <div class="presupuesto">
         <div>
           <p>PRESUPUESTO SEMANAL</p>
-          <p class="monto">€0.00 / €150.00</p>
+          <p class="monto"><span id="gastado">₡0</span> / <span id="tope">₡50.000</span></p>
         </div>
         <div class="campo">
           <label for="presupuesto">Presupuesto:</label>
-          <input type="number" id="presupuesto" name="presupuesto" value="150">
+          <input type="number" id="presupuesto" name="presupuesto" value="50000" step="500" min="0">
         </div>
       </div>
 
       <div class="barra-progreso">
-        <div class="relleno"></div>
+        <div class="relleno" id="relleno"></div>
       </div>
       <div class="info-presupuesto">
-        <span>0% utilizado</span>
-        <span>Ahorro: €150.00</span>
+        <span id="porcentaje">0% utilizado</span>
+        <span id="ahorro">Ahorro: ₡50.000</span>
       </div>
 
       <table class="tabla-planificador">
@@ -116,6 +116,9 @@
     </nav>
     <small>Desarrollado por el grupo 4</small>
   </footer>
+
+  <script src="../js/formato.js"></script>
+  <script src="../js/planificador.js"></script>
 
 </body>
 </html>
