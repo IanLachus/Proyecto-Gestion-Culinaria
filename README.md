@@ -86,9 +86,8 @@ Cada pantalla carga únicamente los archivos que necesita, por ejemplo:
 | Integrante | Rol en el proyecto |
 |------------|--------------------|
 | Mora Espinoza Ian Aarón | Validaciones y gestión de recetas del Panel del Chef (`chef.js`) |
-| Beita Mendez Pablo | Validación del inicio de sesión y buscador de recetas (`login.js`, `recetas.js`) |
 | Perez Miranda Naith Akari | Favoritos y planificador semanal (`favoritos.js`, `planificador.js`) |
-| Rivera Matarrita Dana Valeria | Documentación, pruebas e integración del repositorio |
+| Rivera Matarrita Dana Valeria | Validación del inicio de sesión y buscador de recetas (`login.js`, `recetas.js`) |
 
 > Ajustar los nombres según quién realizó finalmente cada parte.
 
