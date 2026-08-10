@@ -127,9 +127,9 @@ Se utiliza la convención **Conventional Commits** para mantener un historial cl
 ├── README.md          # Este archivo
 ├── docs/              # Documentación y wireframes (PDF)
 │   └── wireframes.pdf
-├── index.html         # Página principal
+├── src/         # Página principal y archivos html
 ├── css/               # Hojas de estilo
-└── js/                # Scripts de JavaScript
+└── assets/img        #Imagenes del proyecto
 ```
 
 ---
