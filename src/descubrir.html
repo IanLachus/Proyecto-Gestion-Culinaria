@@ -36,10 +36,11 @@
     </section>
 
     <section class="espacio">
+      <!-- El buscador redirige a recetas.html cuando presionan Enter -->
       <form class="buscador" action="recetas.html" method="get">
         <label for="buscar">Buscar receta:</label>
         <input type="text" id="buscar" name="buscar" placeholder="Buscar recetas por nombre...">
-        <a href="recetas.html" class="boton boton-claro">Filtros</a>
+        <button type="submit" class="boton boton-claro">Buscar</button>
       </form>
     </section>
 
@@ -73,6 +74,8 @@
     </nav>
     <small>Desarrollado por el grupo 4</small>
   </footer>
+
+  <script src="../js/recetas.js"></script>
 
 </body>
 </html>
