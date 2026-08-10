@@ -1,66 +1,83 @@
-# 🍳 Plataforma Culinaria Colaborativa
+# 🍳 CookPlanner — Plataforma Culinaria Colaborativa
 
-> Plataforma web colaborativa para la **gestión y el descubrimiento de recetas culinarias**, que facilita la planificación de comidas según presupuesto, preferencias dietéticas e ingredientes disponibles.
+> Descubre, guarda y planifica tus recetas favoritas. Plataforma web para la gestión y el descubrimiento de recetas culinarias, con planificación de comidas por presupuesto y una comunidad de chefs y usuarios.
 
 **Curso:** SOFT-06 — Diseño y programación web
-
+**Sección:** SCV · **Periodo:** 2026-C2
 **Docente:** Stephanie Delgado Brenes
-
-**Periodo:** C2 - 2026
-
+**Avance:** III — Interactividad con JavaScript
 
 ---
 
-## 📋 Descripción del proyecto
+## 📋 Descripción del sistema
 
-Sitio web desarrollado con **HTML, CSS y JavaScript** que conecta a chefs, usuarios y administradores en un mismo espacio para crear, descubrir y personalizar recetas. La plataforma busca resolver un problema cotidiano: **qué cocinar según lo que se tiene, lo que se prefiere y lo que se puede gastar.**
+CookPlanner es un sitio web desarrollado con **HTML5, CSS3 y JavaScript** que conecta a tres tipos de usuario en un mismo espacio para crear, descubrir y planificar recetas:
 
-El sistema contempla tres tipos de usuario:
+- **Usuario regular:** busca recetas con filtros, guarda favoritas en colecciones, planifica sus comidas de la semana con control de presupuesto y participa en la comunidad.
+- **Chef / Experto culinario:** carga y gestiona recetas detalladas (ingredientes con costos, categoría, dificultad, pasos y presupuesto por porción) y da seguimiento a su estado de publicación.
+- **Administrador del sistema:** supervisa métricas, gestiona categorías y etiquetas, y modera el contenido reportado por la comunidad.
 
-- **Chef / Experto culinario:** carga y gestiona recetas detalladas (ingredientes, costos, dificultad, instrucciones paso a paso, presupuesto por porción) y valida recetas de usuarios avanzados.
-- **Usuario regular:** busca recetas con filtros avanzados, guarda favoritas en colecciones, crea versiones personalizadas ("versiones derivadas" con atribución), y califica y comenta.
-- **Administrador del sistema:** gestiona categorías y etiquetas, modera contenido y supervisa las métricas de uso.
-
-Además, la plataforma incorpora un **planificador de comidas** (menús semanales con cálculo de presupuesto y lista de compras automática) y un **módulo de comunidad** (seguidores, rankings de recetas y retos mensuales).
-
-La Plataforma Culinaria Colaborativa es una aplicación web diseñada para facilitar la gestión y el descubrimiento de recetas culinarias mediante un entorno intuitivo y colaborativo. El sistema permite a los usuarios compartir recetas, explorar contenido gastronómico, organizar sus preparaciones y administrar información relacionada con ingredientes, categorías y perfiles de usuario.
-
-En el Avance II, el proyecto evoluciona hacia la implementación del frontend mediante HTML y CSS, siguiendo los wireframes desarrollados en la primera etapa. Esta iteración se enfoca en la construcción de la interfaz visual, la navegación entre pantallas y la aplicación de principios de diseño responsivo, accesibilidad y buenas prácticas de desarrollo web.
+En este **Avance III** se agregó la lógica de interacción con JavaScript sobre la maquetación construida en el Avance II: validaciones de formularios, manejo de eventos y manipulación dinámica del DOM.
 
 ---
 
-## 🎯 Alcances
+## ▶️ Cómo ejecutar el proyecto
 
-## Alcance Avance I
-El proyecto se desarrolla como una **solución frontend** que evoluciona mediante al menos dos ciclos de retroalimentación simulada.
+El proyecto no requiere instalación, servidor ni dependencias externas:
 
-**Incluido en el alcance del proyecto:**
-- Maquetación y estilizado de las interfaces (HTML + CSS).
-- Funcionalidades interactivas del lado del cliente (JavaScript).
-- Mínimo 6 funcionalidades para dos tipos de usuario.
-- Búsqueda por ingredientes, versiones derivadas de recetas, planificador de comidas y módulo de comunidad.
+1. Descargar o clonar el repositorio.
+2. Abrir el archivo **`src/index.html`** con cualquier navegador (Chrome, Edge o Firefox).
+3. Iniciar sesión con un correo válido y una contraseña de al menos 6 caracteres.
+4. Navegar por el sistema usando el menú superior o los enlaces del pie de página.
 
-**No incluido (fuera del alcance):**
-- Backend, base de datos en servidor ni autenticación real (los datos se simulan en el cliente).
-- Despliegue en producción con infraestructura propia.
+Para probar una pantalla concreta, se puede abrir directamente su archivo dentro de la carpeta `src/`
+(por ejemplo `src/chef.html` para el Panel del Chef).
 
-**Avance I (entrega actual):**
-- Repositorio en GitHub con este README.
-- Wireframes de mínimo 6 funcionalidades para dos tipos de usuario (ubicados en `/docs`).
+---
 
-  ## Alcance Avance II
+## ⚙️ Funcionalidades implementadas con JavaScript
 
-En el Avance II se inicia la construcción del frontend del sistema, implementando la estructura de las diferentes pantallas mediante HTML semántico y aplicando estilos con CSS para lograr una interfaz consistente, accesible y adaptable a distintos dispositivos. Además, se establece la estructura del proyecto en GitHub y se prepara la navegación entre las funcionalidades principales correspondientes a los diferentes tipos de usuario definidos en el proyecto.
+| # | Funcionalidad | Pantalla | Archivo |
+|---|---------------|----------|---------|
+| 1 | **Validación del inicio de sesión** — correo obligatorio y con formato válido, contraseña obligatoria, sin espacios y de mínimo 6 caracteres. Redirige al entrar correctamente. | Inicio de sesión | `login.js` |
+| 2 | **Buscador y filtro de recetas** — filtra las tarjetas en tiempo real mientras se escribe y acepta búsquedas enviadas desde la pantalla Descubrir. | Recetas / Descubrir | `recetas.js` |
+| 3 | **Marcar y desmarcar favoritos** — el corazón de cada receta cambia de estado y muestra un aviso en la tarjeta. | Recetas / Mi Cocina | `favoritos.js` |
+| 4 | **Planificador semanal** — agrega o quita comidas en el calendario y recalcula el total gastado en colones, el porcentaje y la barra de progreso. Incluye lista de compras y botón para limpiar. | Planificador | `planificador.js` |
+| 5 | **Validación del formulario de recetas** — campos obligatorios, largo mínimo del nombre y presupuesto en colones mayor que cero, con mensajes de error y campo resaltado. | Panel del Chef | `chef.js` |
+| 6 | **Gestión de recetas (crear y eliminar)** — agrega la receta a la tabla, actualiza el contador total y permite eliminarla con confirmación. | Panel del Chef | `chef.js` |
 
-En esta segunda iteración del proyecto se desarrollará la base visual de la aplicación web mediante la implementación de HTML y CSS, tomando como referencia los wireframes elaborados en el Avance I.
+**Eventos utilizados:** `submit` (formularios de login y de recetas), `click` (favoritos, casillas del planificador, eliminar y limpiar), `input` (buscador, presupuesto y campos del formulario) y `change` (selección de dificultad).
 
-Los principales objetivos de esta etapa son:
+**Manipulación del DOM:** `createElement`, `appendChild` y `removeChild` para crear y eliminar filas de la tabla; `classList` para marcar estados; `textContent` y `style` para actualizar mensajes, montos y la barra de progreso.
 
-- Implementar la estructura de las pantallas utilizando HTML5 semántico.
-- Aplicar estilos mediante CSS3 para mantener una identidad visual uniforme.
-- Desarrollar una navegación funcional entre las diferentes vistas del sistema.
-- Organizar la estructura del proyecto dentro del repositorio de GitHub.
-- Preparar la base para la incorporación de funcionalidades dinámicas en las siguientes etapas del proyecto.
+---
+
+## 📁 Estructura de archivos JavaScript
+
+```
+js/
+├── formato.js        # Función compartida para mostrar montos en colones
+├── login.js          # Validación del formulario de inicio de sesión
+├── recetas.js        # Buscador y filtro de recetas
+├── favoritos.js      # Marcar y desmarcar recetas favoritas
+├── planificador.js   # Planificador semanal y cálculo del presupuesto
+└── chef.js           # Panel del Chef: validaciones y gestión de recetas
+```
+
+Cada pantalla carga únicamente los archivos que necesita, por ejemplo:
+
+```html
+<script src="../js/chef.js"></script>
+```
+
+| Pantalla | Archivos JavaScript que carga |
+|----------|-------------------------------|
+| `index.html` | `login.js` |
+| `descubrir.html` | `recetas.js` |
+| `recetas.html` | `recetas.js`, `favoritos.js` |
+| `mi-cocina.html` | `favoritos.js` |
+| `planificador.html` | `formato.js`, `planificador.js` |
+| `chef.html` | `formato.js`, `chef.js` |
 
 ---
 
@@ -68,69 +85,77 @@ Los principales objetivos de esta etapa son:
 
 | Integrante | Rol en el proyecto |
 |------------|--------------------|
-| Mora Espinoza Ian Aarón | Código de la segunda iteración |
-| Beita Mendez Pablo | Código de la segunda iteración |
-| Perez Miranda Naith Akari | Código de la segunda iteración - Repositorio en GitHub actualizado|
-| Rivera Matarrita Dana Valeria | Código de la segunda iteración - Repositorio en GitHub actualizado|
+| Mora Espinoza Ian Aarón | Validaciones y gestión de recetas del Panel del Chef (`chef.js`) |
+| Beita Mendez Pablo | Validación del inicio de sesión y buscador de recetas (`login.js`, `recetas.js`) |
+| Perez Miranda Naith Akari | Favoritos y planificador semanal (`favoritos.js`, `planificador.js`) |
+| Rivera Matarrita Dana Valeria | Documentación, pruebas e integración del repositorio |
+
+> Ajustar los nombres según quién realizó finalmente cada parte.
+
+---
+
+## 🖥️ Pantallas del sistema
+
+| # | Pantalla | Archivo | Tipo de usuario |
+|---|----------|---------|-----------------|
+| 1 | Inicio de sesión | `src/index.html` | Todos |
+| 2 | Descubrir | `src/descubrir.html` | Usuario regular |
+| 3 | Todas las recetas | `src/recetas.html` | Usuario regular |
+| 4 | Planificador semanal | `src/planificador.html` | Usuario regular |
+| 5 | Comunidad (rankings) | `src/comunidad.html` | Usuario regular |
+| 6 | Mi Cocina (perfil) | `src/mi-cocina.html` | Usuario regular |
+| 7 | Panel del Chef | `src/chef.html` | Chef / Experto |
+| 8 | Panel de Administración | `src/admin.html` | Administrador |
 
 ---
 
 ## 🛠️ Tecnologías
 
-- **HTML5** — estructura y contenido.
-- **CSS3** — estilos visuales y diseño responsivo.
-- **JavaScript** — interactividad y lógica del lado del cliente.
-
----
-
-## 🌿 Estrategia de branches
-
-Se trabaja con un flujo basado en ramas para mantener el código estable y organizado:
-
-| Rama | Propósito |
-|------|-----------|
-| `main` | Versión estable y revisada del proyecto. Solo se actualiza con código probado. |
-| `develop` | Rama de integración donde se unen las funcionalidades antes de pasar a `main`. |
-| `feature/<nombre>` | Una rama por cada funcionalidad nueva (ej. `feature/buscar-recetas`, `feature/login`, `feature/planificador`). |
-
-**Flujo de trabajo:**
-1. Cada integrante crea una rama `feature/...` a partir de `develop`.
-2. Al terminar la funcionalidad, se hace un *pull request* hacia `develop`.
-3. Una vez integrado y probado, `develop` se fusiona a `main`.
-
----
-
-## 📝 Estrategia de commits
-
-Se utiliza la convención **Conventional Commits** para mantener un historial claro:
-
-```
-<tipo>: <descripción breve en presente>
-```
-
-| Tipo | Uso |
-|------|-----|
-| `feat` | Nueva funcionalidad (ej. `feat: agregar buscador por ingredientes`) |
-| `fix` | Corrección de errores (ej. `fix: corregir validación del formulario de login`) |
-| `docs` | Cambios en documentación (ej. `docs: actualizar README con roles`) |
-| `style` | Cambios de formato/estilo que no afectan la lógica |
-| `refactor` | Reorganización de código sin cambiar su comportamiento |
-
-**Buenas prácticas:** commits pequeños y frecuentes, descripciones claras y en español.
+- **HTML5** semántico (`header`, `nav`, `main`, `section`, `article`, `footer`, formularios con `label`).
+- **CSS3**: Flexbox, Grid y media queries para diseño responsive.
+- **JavaScript** del lado del cliente: eventos, validaciones y manipulación del DOM.
 
 ---
 
 ## 📁 Estructura del repositorio
 
 ```
-/
-├── README.md          # Este archivo
-├── docs/              # Documentación y wireframes (PDF)
-│   └── wireframes.pdf
-├── src/         # Página principal y archivos html
-├── css/               # Hojas de estilo
-└── assets/img        #Imagenes del proyecto
+CookPlanner/
+├── README.md
+├── src/                    # Pantallas HTML
+├── css/
+│   └── styles.css          # Todos los estilos del proyecto
+├── js/                     # Lógica de interacción (un archivo por pantalla)
+├── assets/
+│   └── img/                # Imágenes de los platillos
+└── docs/                   # Documentación y wireframes (PDF)
 ```
+
+---
+
+## 🌿 Estrategia de branches
+
+| Rama | Propósito |
+|------|-----------|
+| `main` | Versión estable y revisada del proyecto. |
+| `develop` | Rama de integración de funcionalidades. |
+| `feature/<nombre>` | Una rama por funcionalidad (ej. `feature/chef-js`, `feature/login-js`). |
+
+**Flujo:** cada integrante trabaja en una rama `feature/...` desde `develop`, integra mediante *pull request* a `develop`, y `develop` se fusiona a `main` cuando está probado.
+
+---
+
+## 📝 Estrategia de commits
+
+Convención **Conventional Commits**:
+
+| Tipo | Uso |
+|------|-----|
+| `feat` | Nueva funcionalidad (ej. `feat: validaciones del panel del chef`) |
+| `fix` | Corrección de errores |
+| `docs` | Cambios en documentación |
+| `style` | Formato y estilos que no afectan la lógica |
+| `refactor` | Reorganización de código |
 
 ---
 
