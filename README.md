@@ -89,7 +89,6 @@ Cada pantalla carga únicamente los archivos que necesita, por ejemplo:
 | Perez Miranda Naith Akari | Favoritos y planificador semanal (`favoritos.js`, `planificador.js`) |
 | Rivera Matarrita Dana Valeria | Validación del inicio de sesión y buscador de recetas (`login.js`, `recetas.js`) |
 
-> Ajustar los nombres según quién realizó finalmente cada parte.
 
 ---
 
