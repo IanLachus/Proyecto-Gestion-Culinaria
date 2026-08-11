@@ -1,9 +1,5 @@
-/* ==========================================================
-   CookPlanner - planificador.js
-   Planificador semanal: agregar comidas y calcular el presupuesto
-   ========================================================== */
+/* Planificador semanal: agregar comidas y calcular el presupuesto */
 
-// ---- Elementos de la pagina ----
 var casillas = document.querySelectorAll(".casilla");
 var campoPresupuesto = document.getElementById("presupuesto");
 var textoGastado = document.getElementById("gastado");
@@ -14,7 +10,7 @@ var barraRelleno = document.getElementById("relleno");
 var botonLimpiar = document.getElementById("boton-limpiar-plan");
 var botonCompras = document.getElementById("boton-compras");
 
-// ---- Recetas disponibles para planificar (nombre y precio) ----
+// Recetas disponibles para planificar (nombre y precio) 
 var recetas = [
   { nombre: "Gallo Pinto", precio: 1500 },
   { nombre: "Pasta Alfredo", precio: 2800 },
@@ -26,12 +22,7 @@ var recetas = [
 // Guarda el total de dinero gastado en la semana
 var totalGastado = 0;
 
-
-/* ==========================================================
-   1. ACTUALIZAR EL PRESUPUESTO
-   Recalcula el monto, el porcentaje, el ahorro y la barra
-   ========================================================== */
-
+/* ACTUALIZAR EL PRESUPUESTO, recalcula el monto, el porcentaje, el ahorro y la barra */
 function actualizarPresupuesto() {
   var tope = Number(campoPresupuesto.value);
 
@@ -64,12 +55,7 @@ function actualizarPresupuesto() {
   }
 }
 
-
-/* ==========================================================
-   2. AGREGAR O QUITAR UNA COMIDA
-   Al hacer clic en una casilla se elige una receta
-   ========================================================== */
-
+/* AGREGAR O QUITAR UNA COMIDA, al hacer clic en una casilla se elige una receta */
 function manejarCasilla(casilla) {
   // Si la casilla ya tiene una comida, la quitamos
   if (casilla.classList.contains("ocupada")) {
@@ -96,31 +82,19 @@ function manejarCasilla(casilla) {
   actualizarPresupuesto();
 }
 
-
-/* ==========================================================
-   3. EVENTO CLICK en cada casilla del calendario
-   ========================================================== */
-
+/*  EVENTO CLICK en cada casilla del calendario */
 for (var i = 0; i < casillas.length; i++) {
   casillas[i].addEventListener("click", function () {
     manejarCasilla(this);
   });
 }
 
-
-/* ==========================================================
-   4. EVENTO INPUT: recalcular al cambiar el presupuesto
-   ========================================================== */
-
+/* EVENTO INPUT: recalcular al cambiar el presupuesto */
 campoPresupuesto.addEventListener("input", function () {
   actualizarPresupuesto();
 });
 
-
-/* ==========================================================
-   5. BOTON LIMPIAR: vaciar todo el calendario
-   ========================================================== */
-
+/* BOTON LIMPIAR: vaciar todo el calendario */
 botonLimpiar.addEventListener("click", function () {
   for (var i = 0; i < casillas.length; i++) {
     casillas[i].classList.remove("ocupada");
@@ -132,11 +106,7 @@ botonLimpiar.addEventListener("click", function () {
   actualizarPresupuesto();
 });
 
-
-/* ==========================================================
-   6. BOTON LISTA DE COMPRAS: mostrar las comidas planificadas
-   ========================================================== */
-
+/* BOTON LISTA DE COMPRAS: mostrar las comidas planificadas */
 botonCompras.addEventListener("click", function () {
   var lista = "";
   var cantidad = 0;
