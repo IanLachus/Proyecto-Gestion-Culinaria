@@ -1,10 +1,5 @@
-/* ==========================================================
-   CookPlanner - chef.js
-   Panel del Chef: validacion del formulario y CRUD de recetas
-   (crear, listar y eliminar)
-   ========================================================== */
+/*  Panel del Chef: validacion del formulario y CRUD de recetas */
 
-// ---- Elementos de la pagina que vamos a usar ----
 var formulario = document.getElementById("formulario-receta");
 var mensaje = document.getElementById("mensaje");
 var listaRecetas = document.getElementById("lista-recetas");
@@ -21,10 +16,7 @@ var campoIngredientes = document.getElementById("ingredientes");
 var campoPasos = document.getElementById("pasos");
 
 
-/* ==========================================================
-   FUNCIONES DE AYUDA
-   ========================================================== */
-
+// FUNCIONES DE AYUDA
 // Muestra un mensaje de error en la pantalla
 function mostrarError(texto) {
   mensaje.textContent = "⚠️ " + texto;
@@ -59,29 +51,27 @@ function actualizarContador() {
 }
 
 
-/* ==========================================================
-   1. VALIDACION DEL FORMULARIO
-   Revisa los datos antes de guardar la receta
-   ========================================================== */
+/* VALIDACION DEL FORMULARIO
+   Revisa los datos antes de guardar la receta */
 
 function validarFormulario() {
   quitarBordesRojos();
 
-  // El nombre es obligatorio
+  // El nombre es obligatoro
   if (campoNombre.value === "") {
     campoNombre.classList.add("campo-error");
     mostrarError("El nombre de la receta es obligatorio.");
     return false;
   }
 
-  // El nombre debe tener al menos 3 letras
+  // nombre debe tener al menos 3 letras
   if (campoNombre.value.length < 3) {
     campoNombre.classList.add("campo-error");
     mostrarError("El nombre debe tener al menos 3 caracteres.");
     return false;
   }
 
-  // El pais de origen es obligatorio
+  // pais de origen obligatorio
   if (campoOrigen.value === "") {
     campoOrigen.classList.add("campo-error");
     mostrarError("Debe indicar el pais de origen.");
@@ -128,9 +118,7 @@ function validarFormulario() {
 }
 
 
-/* ==========================================================
-   2. CREAR: agregar la receta a la tabla
-   ========================================================== */
+/*  CREAR: agregar la receta a la tabla */
 
 function agregarReceta() {
   // Creamos una fila nueva
@@ -176,9 +164,7 @@ function agregarReceta() {
 }
 
 
-/* ==========================================================
-   3. EVENTO SUBMIT: se ejecuta al enviar el formulario
-   ========================================================== */
+/* EVENTO SUBMIT: se ejecuta al enviar el formulario */
 
 formulario.addEventListener("submit", function (evento) {
   // Evitamos que la pagina se recargue
@@ -199,9 +185,7 @@ formulario.addEventListener("submit", function (evento) {
 });
 
 
-/* ==========================================================
-   4. ELIMINAR: quitar una receta de la tabla
-   ========================================================== */
+/* ELIMINAR: quitar una receta de la tabla */
 
 listaRecetas.addEventListener("click", function (evento) {
   // Revisamos si lo que se hizo clic fue un boton de eliminar
@@ -221,9 +205,7 @@ listaRecetas.addEventListener("click", function (evento) {
 });
 
 
-/* ==========================================================
-   5. EVENTO INPUT: borrar el mensaje mientras el usuario escribe
-   ========================================================== */
+/* EVENTO INPUT: borrar el mensaje mientras el usuario escribe */
 
 campoNombre.addEventListener("input", function () {
   campoNombre.classList.remove("campo-error");
@@ -236,9 +218,7 @@ campoPrecio.addEventListener("input", function () {
 });
 
 
-/* ==========================================================
-   6. EVENTO CHANGE: avisar cuando se cambia la dificultad
-   ========================================================== */
+/* EVENTO CHANGE: avisar cuando se cambia la dificultad */
 
 campoDificultad.addEventListener("change", function () {
   if (campoDificultad.value === "Alta") {
@@ -249,9 +229,7 @@ campoDificultad.addEventListener("change", function () {
 });
 
 
-/* ==========================================================
-   7. BOTON LIMPIAR: vaciar el formulario
-   ========================================================== */
+/* BOTON LIMPIAR: vaciar el formulario */
 
 botonLimpiar.addEventListener("click", function () {
   formulario.reset();
