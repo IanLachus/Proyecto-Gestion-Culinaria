@@ -1,10 +1,7 @@
-/* ==========================================================
-   CookPlanner - formato.js
-   Funcion compartida para mostrar los montos en colones
-   ========================================================== */
+/* Funcion compartida para mostrar los montos en colones */
 
-// Convierte un numero en un texto con formato de colones.
-// Ejemplo: 1500 se convierte en "₡1.500"
+// Convierte un numero en un texto con formato de colones
+// Ej: 1500 se convierte en ₡1.500
 function formatearColones(monto) {
   var entero = Math.round(monto);
   var negativo = false;
