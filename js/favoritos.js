@@ -1,19 +1,13 @@
-/* ==========================================================
-   CookPlanner - favoritos.js
-   Marcar y desmarcar recetas como favoritas
-   ========================================================== */
+/*   Marcar y desmarcar recetas como favoritas */
 
-// ---- Botones de corazon que hay en la pagina ----
+// Botones de corazon que hay en la pagina
 var botonesFavorito = document.querySelectorAll(".favorito");
 
 // Contador de recetas favoritas
 var totalFavoritos = 0;
 
 
-/* ==========================================================
-   1. ESTADO INICIAL
-   Al abrir la pagina contamos cuantas recetas ya son favoritas
-   ========================================================== */
+/* ESTADO INICIAL, al abrir la pagina contamos cuantas recetas ya son favoritas */
 
 for (var i = 0; i < botonesFavorito.length; i++) {
   // Las recetas empiezan marcadas como favoritas
@@ -22,9 +16,7 @@ for (var i = 0; i < botonesFavorito.length; i++) {
 }
 
 
-/* ==========================================================
-   2. MARCAR O DESMARCAR UNA RECETA
-   ========================================================== */
+/* MARCAR O DESMARCAR UNA RECETA */
 
 function cambiarFavorito(boton) {
   // Buscamos el nombre de la receta dentro de la tarjeta
@@ -48,10 +40,8 @@ function cambiarFavorito(boton) {
 }
 
 
-/* ==========================================================
-   3. AVISO EN PANTALLA
-   Muestra un mensaje corto debajo del corazon
-   ========================================================== */
+/* AVISO EN PANTALLA
+   Muestra un mensaje corto debajo del corazon */
 
 function mostrarAviso(boton, nombreReceta) {
   var tarjeta = boton.closest(".tarjeta");
@@ -72,9 +62,7 @@ function mostrarAviso(boton, nombreReceta) {
 }
 
 
-/* ==========================================================
-   4. EVENTO CLICK en cada corazon
-   ========================================================== */
+/* EVENTO CLICK en cada corazon */
 
 for (var j = 0; j < botonesFavorito.length; j++) {
   botonesFavorito[j].addEventListener("click", function () {
